@@ -18,6 +18,7 @@
   "homepage": "https://github.com/jadelet/Find-Me-A-Friend#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "survey-jquery": "^1.0.50"
   }
 }
