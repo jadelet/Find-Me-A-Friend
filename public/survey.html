@@ -2,7 +2,7 @@
 <script src="https://unpkg.com/jquery"></script>
 <script src="https://surveyjs.azureedge.net/1.0.49/survey.jquery.js"></script>
 <link href="https://surveyjs.azureedge.net/1.0.49/survey.css" type="text/css" rel="stylesheet" />
-<link rel="stylesheet" href="./index.css">
+
 
 </head>
 
@@ -13,9 +13,31 @@
   <div id="surveyElement"></div>
   <div id="surveyResult"></div>
 
-  <script type="text/javascript" src="../app/Data/friends.js"></script>
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
 
-</body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
 
 
 <script>
@@ -35,14 +57,17 @@
           isRequired: true
         },
         {
-          type: "file",
+          type: "text",
           title: "Please upload your photo",
           name: "image",
-          storeDataAsText: false,
-          showPreview: true,
-          imageWidth: 150,
-          maxSize: 102400,
-          // isRequired: true,
+          inputType: "url",
+          placeHolder: "http://pictureofme.myvanitysite.com",
+            isRequired: true,
+            validators: [
+                {
+                    inputType: "url"
+                }
+              ]
         },
 
         {
@@ -129,11 +154,15 @@
           type: "text",
           name: "Email",
           title: "Thank you for taking the time to tell us more about yourself. Your survey is almost complete, please enter your email address if you'd like your soulmate to be able to reach you."
+          placeHolder: "jon.snow@nightwatch.org",
+            isRequired: true,
+            validators: [  {
+                    type: "email"
+                }]
         }
       ]
     }]
   }
-
 
   window.survey = new Survey.Model(json);
 
@@ -147,45 +176,16 @@
     });
 
 
-        // survey.onUploadFiles.add((survey, options) => {}
 
-    // var formData = new FormData();
-    // options.files.forEach(function(file) {
-    //     formData.append(file.name, file);
-    // });
-    // $.ajax({
-    //     url: "/api/MySurveys/uploadFiles", 
-    //     type: "POST",
-    //     xhr: function () {
-    //         var myXhr = $.ajaxSettings.xhr();
-    //         if (myXhr.upload) {
-    //             myXhr.upload.addEventListener('progress', function (event) {
-    //                 var percent = 0;
-    //                 var position = event.loaded || event.position;
-    //                 var total = event.total;
-    //             }, false);
-    //         }
-    //         return myXhr;
-    //     },
-    //     success: function (data) {
-    //         options.callback("success",
-    //             options.files.map(file => {
-    //                 return { file: file, content: "/api/MySurveys/files?name=" + data[file.name] };
-    //             })
-    //         );
-    //     },
-    //     error: function (error) {
-    //     },
-    //     async: true,
-    //     data: formData,
-    //     cache: false,
-    //     contentType: false,
-    //     processData: false,
-    //     timeout: 60000
-    // });
-;
+  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-  $("#surveyElement").Survey({
-    model: survey
-  });
-</script>
+
+
+
+</body>
+</html>
+
+

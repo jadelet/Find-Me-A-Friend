@@ -2,7 +2,7 @@
   "name": "find-me-a-friend",
   "version": "1.0.0",
   "description": "friend finding app",
-  "main": "index.js",
+  "main": "./app/Data/friends.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/jadelet/Find-Me-A-Friend.git"
   },
-  "author": "",
+  "author": "Jen Wolfson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jadelet/Find-Me-A-Friend/issues"
