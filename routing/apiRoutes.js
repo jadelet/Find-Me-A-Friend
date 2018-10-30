@@ -17,7 +17,7 @@ console.log(req)
           friendsData.push(newfriend);
           res.json(true);
           console.log(friendsData);
-
+          var i=0
 
 
 
@@ -26,22 +26,22 @@ console.log(req)
  
           //start with the array of freinds in the database(friendsData) and compare each object in that array to the newfriend object as follows:
           var matchArray = [
-            Math.abs(this.intelligence - newfriend.intelligence),
-            Math.abs(this.Obviousness - newfriend.Obviousness),
-            Math.abs(this.Refinementism - newfriend.Refinementism),
-            Math.abs(this.Boringness - newfriend.Boringness),
-            Math.abs(this.Recreationalism - newfriend.Recreationalism),
-            Math.abs(this.Phillyness - newfriend.Phillyness),
-            Math.abs(this.Britishness - newfriend.Britishness),
-            Math.abs(this.Brickness - newfriend.Brickness),
-            Math.abs(this.Religiosity - newfriend.Religiosity),
-            Math.abs(this.Geekness - newfriend.Geekness)
+            Math.abs(parseInt(friendsData[i].intelligence) - parseInt(newfriend.intelligence)),
+            Math.abs(parseInt(friendsData[i].Obviousness) - parseInt(newfriend.Obviousness)),
+            Math.abs(parseInt(friendsData[i].Refinementism) - parseInt(newfriend.Refinementism)),
+            Math.abs(parseInt(friendsData[i].Boringness) - parseInt(newfriend.Boringness)),
+            Math.abs(parseInt(friendsData[i].Recreationalism) - parseInt(newfriend.Recreationalism)),
+            Math.abs(parseInt(friendsData[i].Phillyness) - parseInt(newfriend.Phillyness)),
+            Math.abs(parseInt(friendsData[i].Britishness) - parseInt(newfriend.Britishness)),
+            Math.abs(parseInt(friendsData[i].Brickness) - parseInt(newfriend.Brickness)),
+            Math.abs(parseInt(friendsData[i].Religiosity) - parseInt(newfriend.Religiosity)),
+            Math.abs(parseInt(friendsData[i].Geekness) - parseInt(newfriend.Geekness))
           ]
 
       
-            for (i = 0; i < matchArray.length; i++) {
+            for (i = 0; i < friendsData.length; i++) {
 
-
+console.log (matchArray)
 
               //therefore the comparison of the new friend to position [i] will result in an array representing the differences in each category. Next we have to get the sum of those differences. 
               function getSum(total, num) {

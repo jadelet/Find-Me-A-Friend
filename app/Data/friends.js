@@ -8,7 +8,7 @@ const friendsData = [
     "Boringness": 5,
     "Recreationalism": 5,
     "Phillyness": 5,
-    "Gkrness/Britishness/Musicness": 5,
+    "Britishness": 5,
     "Brickness": 3,
     "Religiosity": 1,
     "Geekness": 5
@@ -22,7 +22,7 @@ const friendsData = [
     "Boringness": 4,
     "Recreationalism": 2,
     "Phillyness": 1,
-    "Gkrness/Britishness/Musicness": 5,
+    "Britishness": 5,
     "Brickness": 4,
     "Religiosity": 1,
     "Geekness": 3
@@ -36,7 +36,7 @@ const friendsData = [
     "Boringness": 5,
     "Recreationalism": 5,
     "Phillyness": 5,
-    "Gkrness/Britishness/Musicness": 1,
+    "Britishness": 1,
     "Brickness": 5,
     "Religiosity": 1,
     "Geekness": 1
