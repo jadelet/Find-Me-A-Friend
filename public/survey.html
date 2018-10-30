@@ -174,16 +174,18 @@
 
             event.preventDefault();
             var newFriend = result.data;
-            console.log("newFriend =" + newFriend);
+            console.log("newFriend =" + JSON.stringify(newFriend));
             $.ajax({
                 url: "/api/friends",
                 method: "POST",
                 data: newFriend
               }).then(function (response) {
-
-                  $('#match-modal').modal('show')
-                  $("#bestfriend").innerhtml(
-                    `<p> We think you are a good match with ${bestFriend}</p>`
+                console.log (response)
+                
+                jQuery.noConflict(); 
+                  $("#match-modal").modal("show")
+                  $("#bestfriend").html("<p>Hello World</p>"
+                    // `<p> We think you are a good match with ${bestFriend}</p>`
                   )
                 });
               });
