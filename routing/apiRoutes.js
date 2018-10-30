@@ -1,5 +1,5 @@
 const friendsData = require("../app/data/friends");
-var bestFriend 
+
 console.log(friendsData)
 
 module.exports = function (app) {
@@ -9,10 +9,12 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
-
-          //middleware
-          var newFriend = req.body;
-          friendsData.push(newFriend);
+console.log(req)
+          var newfriend = req.body;
+          console.log(newfriend);
+          newfriend.routeName = newfriend.name.replace(/\s+/g, "").toLowerCase();
+         
+          friendsData.push(newfriend);
           res.json(true);
           console.log(friendsData);
 
@@ -20,19 +22,20 @@ module.exports = function (app) {
 
 
           //create a function to determine the difference between the various values of the object properties.
-          // compare newFriend to each object in the array of friends, parameter to parameter value, using Math.abs() to determine absolute value of difference
-
-          //start with the array of freinds in the database(friendsData) and compare each object in that array to the newFriend object as follows:
-          var matchArray = [Math.abs(this.intelligence - newFriend.intelligence),
-            Math.abs(this.Obviousness - newFriend.Obviousness),
-            Math.abs(this.Refinementism - newFriend.Refinementism),
-            Math.abs(this.Boringness - newFriend.Boringness),
-            Math.abs(this.Recreationalism - newFriend.Recreationalism),
-            Math.abs(this.Phillyness - newFriend.Phillyness),
-            Math.abs(this.Britishness - newFriend.Britishness),
-            Math.abs(this.Brickness - newFriend.Brickness),
-            Math.abs(this.Religiosity - newFriend.Religiosity),
-            Math.abs(this.Geekness - newFriend.Geekness)
+          // compare newfriend to each object in the array of friends, parameter to parameter value, using Math.abs() to determine absolute value of difference
+ 
+          //start with the array of freinds in the database(friendsData) and compare each object in that array to the newfriend object as follows:
+          var matchArray = [
+            Math.abs(this.intelligence - newfriend.intelligence),
+            Math.abs(this.Obviousness - newfriend.Obviousness),
+            Math.abs(this.Refinementism - newfriend.Refinementism),
+            Math.abs(this.Boringness - newfriend.Boringness),
+            Math.abs(this.Recreationalism - newfriend.Recreationalism),
+            Math.abs(this.Phillyness - newfriend.Phillyness),
+            Math.abs(this.Britishness - newfriend.Britishness),
+            Math.abs(this.Brickness - newfriend.Brickness),
+            Math.abs(this.Religiosity - newfriend.Religiosity),
+            Math.abs(this.Geekness - newfriend.Geekness)
           ]
 
       
