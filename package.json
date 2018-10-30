@@ -4,7 +4,8 @@
   "description": "friend finding app",
   "main": "./app/Data/friends.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,6 @@
     "express": "^4.16.4",
     "path": "^0.12.7",
     "survey-jquery": "^1.0.50"
-  }
+  },
+  "devDependencies": {}
 }
