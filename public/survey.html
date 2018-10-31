@@ -41,7 +41,7 @@
         <div class="modal-body" id="bestfriend">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <button type="button" onclick="myFunction()"class="btn btn-secondary" data-dismiss="modal" >Close</button>
         </div>
       </div>
     </div>
@@ -183,17 +183,24 @@
                 console.log (response)
                 
                 jQuery.noConflict(); 
+                console.log(response.image)
                   $("#match-modal").modal("show")
-                  $("#bestfriend").html("<p>Hello World</p>"
-                    // `<p> We think you are a good match with ${bestFriend}</p>`
+                  $("#bestfriend").html(
+                    `<p> We think you are a good match with ${response.name}</p>
+                  <img src= ${response.image}  alt= "picture of ${response.name}">`
                   )
                 });
               });
 
 
-                  $("#surveyElement").Survey({
+                  function myFunction (){
+                    $("#surveyElement").Survey({
                     model: survey
-                  });
+                    })
+                };
+                  
+
+                  
               
               
     </script>

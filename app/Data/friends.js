@@ -1,7 +1,7 @@
 const friendsData = [
  {
     "name": "Jen Wolfson",
-    "image": "https://media.licdn.com/dms/image/C4E03AQEXhktxC9SzEA/profile-displayphoto-shrink_200_200/0?e=1545264000&v=beta&t=2LzwG3lN3fZ1EDOgXtwKptCR9PdmcVkOZcU7PGXjQ-A",
+    "image": "https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-9/39943586_1655326844590471_2143267424634404864_n.jpg?_nc_cat=109&_nc_ht=scontent-mia3-2.xx&oh=084493f08fffe63f484579dd5d894c40&oe=5C473466",
     "intelligence": 1,
     "Obviousness": 5,
     "Refinementism": 1,
@@ -15,7 +15,7 @@ const friendsData = [
   },
   {
     "name": "Samuel Winchester",
-    "image": "https://www.google.com/imgres?imgurl=http%3A%2F%2Fimages6.fanpop.com%2Fimage%2Fphotos%2F34800000%2FSam-Winchester-supernatural-34852420-500-300.png&imgrefurl=http%3A%2F%2Ffr.fanpop.com%2Fclubs%2Fsupernatural%2Fimages%2F34852420%2Ftitle%2Fsam-winchester-photo&docid=9PZbiftBFRJALM&tbnid=SHmopaEicnsyhM%3A&vet=10ahUKEwjkmaqn8o7eAhWLdN8KHc9WClkQMwgyKAAwAA..i&w=500&h=300&bih=666&biw=1024&q=sam%20winchester%20image&ved=0ahUKEwjkmaqn8o7eAhWLdN8KHc9WClkQMwgyKAAwAA&iact=mrc&uact=8",
+    "image": "https://thesupernaturalfoxsisters.files.wordpress.com/2015/01/9p-sam-winchester-worries-theres-no-place-like-home-supernatural.jpeg",
     "intelligence": 1,
     "Obviousness": 3,
     "Refinementism": 3,
@@ -29,7 +29,7 @@ const friendsData = [
   },
   {
     "name": "Dean Winchester",
-    "image": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwir0Yu38o7eAhUIhuAKHZqsDRkQjRx6BAgBEAU&url=https%3A%2F%2Fpandlr.com%2Fuser%2Fwinckdl%2F&psig=AOvVaw31As6Qdn7QUvIhn-4B22ka&ust=1539914399685711",
+    "image": "https://78.media.tumblr.com/9be3d575a0841c740fe428192644f791/tumblr_p0h0ejrDj81r7t4ijo1_540.jpg",
     "intelligence": 4,
     "Obviousness": 1,
     "Refinementism": 1,
@@ -40,6 +40,20 @@ const friendsData = [
     "Brickness": 5,
     "Religiosity": 1,
     "Geekness": 1
+  },
+  {
+    "name": "Castiel",
+    "image": "https://www.dailydot.com/wp-content/uploads/2b8/11/35107f9e2ebd17c300c843613f1ba09f.jpg",
+    "intelligence": 5,
+    "Obviousness": 1,
+    "Refinementism": 1,
+    "Boringness": 1,
+    "Recreationalism": 5,
+    "Phillyness": 5,
+    "Britishness": 5,
+    "Brickness": 5,
+    "Religiosity": 5,
+    "Geekness": 5
   }
 ]
 

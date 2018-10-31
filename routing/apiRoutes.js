@@ -4,9 +4,7 @@ console.log(friendsData)
 
 module.exports = function (app) {
 
-  app.get("/api/friends", function (req, res) {
-    res.json(friends);
-  });
+ 
 
   app.post("/api/friends", function (req, res) {
     console.log(req)
@@ -15,7 +13,7 @@ module.exports = function (app) {
     newfriend.routeName = newfriend.name.replace(/\s+/g, "").toLowerCase();
 
     friendsData.push(newfriend);
-    res.json(true);
+    // res.json(true);
     console.log(friendsData);
     var i
 
@@ -26,7 +24,7 @@ module.exports = function (app) {
 
     //start with the array of freinds in the database(friendsData) and compare each object in that array to the newfriend object as follows:
     var totalsArray = [];
-    for (i = 0; i < friendsData.length; i++) {
+    for (i = 0; i < friendsData.length-1; i++) {
       var matchArray = [
         Math.abs(parseInt(friendsData[i].intelligence) - parseInt(newfriend.intelligence)),
         Math.abs(parseInt(friendsData[i].Obviousness) - parseInt(newfriend.Obviousness)),
@@ -71,6 +69,8 @@ module.exports = function (app) {
 
 
     var j = totalsArray.indexOf(match)
-    var bestFriend = [friendsData[j].name, friendsData[j].image]
+    var bestFriend = {name: friendsData[j].name, image: friendsData[j].image}
+    console.log(bestFriend);
+    res.json(bestFriend);
   })
 }
