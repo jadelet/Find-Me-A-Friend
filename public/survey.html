@@ -41,7 +41,7 @@
         <div class="modal-body" id="bestfriend">
         </div>
         <div class="modal-footer">
-          <button type="button" onclick="myFunction()"class="btn btn-secondary" data-dismiss="modal" >Close</button>
+          <button type="button"  onclick="location.reload();" class="btn btn-secondary" data-dismiss="modal" >Close</button>
         </div>
       </div>
     </div>
@@ -187,17 +187,17 @@
                   $("#match-modal").modal("show")
                   $("#bestfriend").html(
                     `<p> We think you are a good match with ${response.name}</p>
-                  <img src= ${response.image}  alt= "picture of ${response.name}">`
+                  <img src= ${response.image}  width="250" alt= "picture of ${response.name}">`
                   )
                 });
               });
 
 
-                  function myFunction (){
+              
                     $("#surveyElement").Survey({
                     model: survey
                     })
-                };
+                ;
                   
 
                   
